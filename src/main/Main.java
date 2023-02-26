@@ -7,10 +7,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws ParseException {
-        System.out.println("Ведите дату полива в формате dd-MM-yyyy ");
+        Date datenow = new Date();
+        System.out.println("Текущая дата " + datenow.toInstant() + " Ведите дату полива в формате dd-MM-yyyy");
         Scanner inputdate = new Scanner(System.in);
         String date2 = inputdate.next();
-        Date datenow = new Date();
         String date1 = new SimpleDateFormat("dd-MM-yyyy").format(datenow);
         SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
         Date dateOne = null;
